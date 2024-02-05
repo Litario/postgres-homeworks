@@ -1,5 +1,6 @@
 -- SQL-команды для создания таблиц
 
+
 CREATE TABLE employees
 (
     employee_id serial PRIMARY KEY,
@@ -22,15 +23,8 @@ CREATE TABLE customers
 CREATE TABLE orders
 (
 	order_id int PRIMARY KEY,
-	customer_id varchar(50) UNIQUE REFERENCES customers(customer_id) NOT NULL,
-	employee_id serial UNIQUE REFERENCES employees(employee_id) NOT NULL,
+	customer_id varchar(50) REFERENCES customers(customer_id) NOT NULL,
+	employee_id int REFERENCES employees(employee_id) NOT NULL,
 	order_date date,
 	ship_city varchar(50)
 );
-
-SELECT * FROM employees
-
-DROP TABLE employees, customers, orders;
-
-
-

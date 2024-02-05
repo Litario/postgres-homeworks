@@ -6,7 +6,7 @@ from work_dir.passwords import POSTGRES_PASSWORD
 
 
 def send_csv_to_postgres(csv_file_name, postgres_table_name):
-    """Функция для передачи данных из csv файла в базу данных PostgreSQL"""
+    """Функция для передачи данных из csv файла в базу данных postgres"""
 
     with open(f'{csv_file_name}', encoding='windows-1251') as csv_file:
         csv_reader = csv.DictReader(csv_file)
