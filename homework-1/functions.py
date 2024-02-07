@@ -19,6 +19,7 @@ def send_csv_to_postgres(csv_file_name, postgres_table_name):
 
     try:
         ## connect to DATABASE
+
         conn = psycopg2.connect(host='localhost',
                                 database='north',
                                 user='postgres',

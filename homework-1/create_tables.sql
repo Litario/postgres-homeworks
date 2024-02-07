@@ -7,7 +7,7 @@ CREATE TABLE employees
     first_name varchar(100) NOT NULL,
 	last_name varchar(100) NOT NULL,
 	title varchar(100) NOT NULL,
-	birth_date date,
+	birth_date date NOT NULL,
 	notes text
 );
 
@@ -25,6 +25,6 @@ CREATE TABLE orders
 	order_id int PRIMARY KEY,
 	customer_id varchar(50) REFERENCES customers(customer_id) NOT NULL,
 	employee_id int REFERENCES employees(employee_id) NOT NULL,
-	order_date date,
-	ship_city varchar(50)
+	order_date date NOT NULL,
+	ship_city varchar(50) NOT NULL
 );
